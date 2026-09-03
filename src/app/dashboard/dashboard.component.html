@@ -1,0 +1,143 @@
+<div class="counter-container">
+  <!-- Top Header Bar -->
+  <div class="counter-header">
+    <h2>☕ ChaiKhata Counter</h2>
+    <div class="today-badge">Today's Total: <span>₹1,240</span></div>
+  </div>
+
+  <div class="main-layout">
+    <!-- Left Section: Category Accordions -->
+    <div class="categories-section">
+      
+      <!-- Category 1: Chai & Coffee (Expanded Example) -->
+      <div class="category-card expanded">
+        <div class="category-header">
+          <div class="cat-title">
+            <span class="cat-icon">☕</span>
+            <span class="cat-name">Chai & Coffee</span>
+          </div>
+          <span class="arrow-icon">▲</span>
+        </div>
+
+        <div class="items-grid">
+          <div class="item-card active">
+            <div class="item-info">
+              <span class="item-name">Cutting Tea</span>
+              <span class="item-price">₹12</span>
+            </div>
+            <button class="add-btn" type="button">+</button>
+          </div>
+
+          <div class="item-card">
+            <div class="item-info">
+              <span class="item-name">Ginger Tea</span>
+              <span class="item-price">₹20</span>
+            </div>
+            <button class="add-btn" type="button">+</button>
+          </div>
+
+          <div class="item-card">
+            <div class="item-info">
+              <span class="item-name">Cold Coffee</span>
+              <span class="item-price">₹50</span>
+            </div>
+            <button class="add-btn" type="button">+</button>
+          </div>
+
+          <div class="item-card">
+            <div class="item-info">
+              <span class="item-name">Masala Tea</span>
+              <span class="item-price">₹25</span>
+            </div>
+            <button class="add-btn" type="button">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Snacks (Collapsed Example) -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="cat-title">
+            <span class="cat-icon">🍞</span>
+            <span class="cat-name">Snacks</span>
+          </div>
+          <span class="arrow-icon">▼</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Cold Drinks (Collapsed Example) -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="cat-title">
+            <span class="cat-icon">🥤</span>
+            <span class="cat-name">Cold Drinks</span>
+          </div>
+          <span class="arrow-icon">▼</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Section: Live Cart & Multi-Actions -->
+    <div class="cart-section">
+      <div class="cart-header">
+        <h3>🛒 Current Order</h3>
+        <button class="clear-btn" type="button">Clear</button>
+      </div>
+
+      <!-- Cart Item List -->
+      <div class="cart-list">
+        <div class="cart-item">
+          <div class="cart-details">
+            <span class="cart-name">Cutting Tea</span>
+            <span class="cart-qty">₹12 x 1</span>
+          </div>
+          <span class="cart-total">₹12</span>
+        </div>
+
+        <div class="cart-item">
+          <div class="cart-details">
+            <span class="cart-name">Bun Maska</span>
+            <span class="cart-qty">₹35 x 1</span>
+          </div>
+          <span class="cart-total">₹35</span>
+        </div>
+      </div>
+
+      <!-- Payment Mode Options -->
+      <div class="payment-mode-section">
+        <label class="section-label">PAYMENT MODE</label>
+        <div class="payment-options">
+          <button class="pay-option-btn active" type="button">📱 UPI</button>
+          <button class="pay-option-btn" type="button">💵 Cash</button>
+          <button class="pay-option-btn" type="button">💳 Khata</button>
+        </div>
+      </div>
+
+      <!-- Amount Summary -->
+      <div class="total-summary">
+        <span>Total Amount:</span>
+        <span class="amount">₹47</span>
+      </div>
+
+      <!-- Action Buttons (Save & Print / Save Only / Print Only) -->
+      <div class="cart-actions">
+        <!-- Main Primary Button -->
+        <button class="btn btn-save-print" type="button">
+          🖨️ Save & Print (₹47)
+        </button>
+
+        <!-- Secondary Buttons -->
+        <div class="sub-actions">
+          <button class="btn btn-save" type="button">
+            💾 Save Only
+          </button>
+          <button class="btn btn-print" type="button">
+            📄 Print Only
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
