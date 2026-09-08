@@ -1,0 +1,108 @@
+<div class="menu-management-container">
+  
+  <!-- Header Section -->
+  <div class="page-header">
+    <h2>📋 Menu Management</h2>
+    <p>Add new items to your menu or remove existing ones.</p>
+  </div>
+
+  <!-- Add New Item Form -->
+  <div class="card add-item-card">
+    <h3>➕ Add New Item</h3>
+    <div class="add-form">
+      
+      <div class="form-group">
+        <label>Item Name</label>
+        <input type="text" placeholder="e.g. Special Masala Tea" />
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select>
+          <option value="" disabled selected>Select Category</option>
+          <option value="Chai & Coffee">Chai & Coffee</option>
+          <option value="Snacks">Snacks</option>
+          <option value="Cold Drinks">Cold Drinks</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Price (₹)</label>
+        <input type="number" placeholder="15" />
+      </div>
+
+      <button type="button" class="btn-add">+ Save Item</button>
+
+    </div>
+  </div>
+
+  <!-- Category 1: Chai & Coffee -->
+  <div class="category-section">
+    <h3 class="category-title">☕ Chai & Coffee</h3>
+
+    <div class="items-grid">
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Cutting Tea</h4>
+          <span class="item-price">₹12</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Ginger Tea</h4>
+          <span class="item-price">₹20</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Cold Coffee</h4>
+          <span class="item-price">₹50</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 2: Snacks -->
+  <div class="category-section">
+    <h3 class="category-title">🥪 Snacks</h3>
+
+    <div class="items-grid">
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Bun Maska</h4>
+          <span class="item-price">₹35</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Crispy Samosa</h4>
+          <span class="item-price">₹30</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 3: Cold Drinks -->
+  <div class="category-section">
+    <h3 class="category-title">🥤 Cold Drinks</h3>
+
+    <div class="items-grid">
+      <div class="item-card">
+        <div class="item-info">
+          <h4>Rose Milkshake</h4>
+          <span class="item-price">₹40</span>
+        </div>
+        <button type="button" class="btn-delete">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+
+</div>

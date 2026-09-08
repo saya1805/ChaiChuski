@@ -1,0 +1,117 @@
+  <div class="dashboard-wrapper">
+    <!-- Top Header Section -->
+    <header class="dashboard-header">
+      <div class="header-text">
+        <h1>Dashboard</h1>
+        <p>Overview of today's cafe sales and khata accounts</p>
+      </div>
+      <button class="btn-primary">+ New Sale</button>
+    </header>
+
+    <!-- Metric Cards Row -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="icon-box bg-orange">💰</div>
+        <div class="metric-details">
+          <span class="label">Total Sales Today</span>
+          <div class="value">₹4,520</div>
+          <span class="subtext text-success">+12% vs yesterday</span>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <div class="icon-box bg-blue">☕</div>
+        <div class="metric-details">
+          <span class="label">Tea Cups Sold</span>
+          <div class="value">340 Cups</div>
+          <span class="subtext text-blue">Target: 400</span>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <div class="icon-box bg-pink">💳</div>
+        <div class="metric-details">
+          <span class="label">Pending Khata</span>
+          <div class="value">₹1,250</div>
+          <span class="subtext text-danger">12 Customers Pending</span>
+        </div>
+      </div>
+
+      <div class="metric-card">
+        <div class="icon-box bg-green">📋</div>
+        <div class="metric-details">
+          <span class="label">Total Orders</span>
+          <div class="value">85</div>
+          <span class="subtext text-success">All Completed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Add Items Section -->
+    <section class="content-card">
+      <h3 class="section-title">⚡ Quick Add Items</h3>
+      <div class="quick-items-grid">
+        <button class="quick-btn">
+          <span class="item-name">Cutting Tea</span>
+          <span class="item-price">₹12</span>
+        </button>
+        <button class="quick-btn">
+          <span class="item-name">Ginger Tea</span>
+          <span class="item-price">₹20</span>
+        </button>
+        <button class="quick-btn">
+          <span class="item-name">Bun Maska</span>
+          <span class="item-price">₹35</span>
+        </button>
+        <button class="quick-btn">
+          <span class="item-name">Cream Roll</span>
+          <span class="item-price">₹15</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Recent Transactions Table Section -->
+    <section class="content-card">
+      <div class="section-header">
+        <h3 class="section-title">📋 Recent Transactions</h3>
+        <a href="#" class="link-view-all">View All &rarr;</a>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Order / Customer</th>
+              <th>Items</th>
+              <th>Time</th>
+              <th>Amount</th>
+              <th>Payment Mode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold">#ORD-1089</td>
+              <td class="text-secondary">2x Cutting Tea, 1x Bun Maska</td>
+              <td class="text-secondary">10 mins ago</td>
+              <td class="font-bold">₹59</td>
+              <td><span class="badge badge-upi">UPI</span></td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Amit Patil</td>
+              <td class="text-secondary">1x Special Ginger Tea</td>
+              <td class="text-secondary">25 mins ago</td>
+              <td class="font-bold">₹20</td>
+              <td><span class="badge badge-khata">Credit Khata</span></td>
+            </tr>
+            <tr>
+              <td class="font-semibold">#ORD-1087</td>
+              <td class="text-secondary">4x Cutting Tea</td>
+              <td class="text-secondary">40 mins ago</td>
+              <td class="font-bold">₹48</td>
+              <td><span class="badge badge-cash">Cash</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>

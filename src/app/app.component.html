@@ -1,5 +1,7 @@
 <div class="app-container">
+   @if(CurrentNavigation() != '/userAuth'){
   <app-sidebar [(isClosed)]="isSidebarClosed"></app-sidebar>
+   }
 
   <main class="main-content" [class.full-width]="isSidebarClosed()">
     @if(CurrentNavigation() != '/sidebar'){
