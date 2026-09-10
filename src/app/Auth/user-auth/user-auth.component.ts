@@ -42,6 +42,13 @@ export class UserAuthComponent {
           alert("This Mail id Already Registerd")
         }
       }
+
+      const reslogin = this.apireslogin() as any;
+      if(reslogin){
+        console.log("Login Api Response",reslogin)
+      }else{
+        alert("Unauthorized User")
+      }
     })
   }
 
