@@ -33,6 +33,7 @@ export class UserAuthComponent {
     })
   
     effect(() => {
+      // sign up api  res
       const res = this.apires() as any;
       if(res){
         console.log("Api Response",res)
@@ -43,6 +44,7 @@ export class UserAuthComponent {
         }
       }
 
+      // login api res
       const reslogin = this.apireslogin() as any;
       if(reslogin){
         console.log("Login Api Response",reslogin)
