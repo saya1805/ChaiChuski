@@ -18,8 +18,8 @@
   <div class="auth-card">
     <!-- Tabs -->
     <div class="tab-container">
-      <button type="button" class="tab-btn   active">Sign In</button>
-      <button type="button" class="tab-btn">Sign Up</button>
+      <button type="button" class="tab-btn   active" [class.active]="!isSignUp()" (click)="onTabChange(false)">Sign In</button>
+      <button type="button" class="tab-btn" [class.active]="isSignUp()" (click)="onTabChange(true)">Sign Up</button>
     </div>
 
     <!-- Form -->
@@ -64,7 +64,8 @@
       </div>
 
       <!-- Submit Button -->
-      <button type="button" class="submit-btn" (click)="signin()">Sign In</button>
+      <!-- <button type="button" class="submit-btn" (click)="signin()">Sign In</button> -->
+      <button type="button" class="submit-btn" (click)="isSignUp()">{{isSignUp() ? 'Sign Up' : 'Sign In'}}</button>
     </form>
   </div>
 </div>

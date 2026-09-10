@@ -23,5 +23,14 @@ export class ApiService {
     };
      return this.http.post(this.apiUrl+'login/SignIn',JSON.stringify(data), httpOptions)
   }
+
+   senduserinfoLogin(data:any){
+   const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+     return this.http.post(this.apiUrl+'login/logIn',JSON.stringify(data), httpOptions)
+  }
   
 }

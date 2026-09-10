@@ -55,12 +55,17 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
+/* ==========================================
+   TAB CONTAINER & ACTIVE SWITCHING STYLES
+   ========================================== */
+
 .tab-container {
   display: flex;
   background: #f3eee8;
   padding: 4px;
   border-radius: 14px;
   margin-bottom: 24px;
+  position: relative;
 }
 
 .tab-btn {
@@ -73,14 +78,27 @@
   font-size: 14px;
   color: #6e5a4b;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease-in-out;
+  outline: none;
 }
 
+/* माऊस वर नेल्यावर मिळणारा इफेक्ट */
+.tab-btn:hover:not(.active) {
+  color: #3b2314;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* **क्लिक झाल्यावर (Active) बदलणारा रंग आणि Look** */
 .tab-btn.active {
   background: #ffffff;
-  color: #3b2314;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #a34804; /* ब्रँडच्या थीमप्रमाणे Text Color बदलला */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
 }
+
+/* ==========================================
+   FORM CONTROLS & INPUTS
+   ========================================== */
 
 .form-group {
   margin-bottom: 20px;
@@ -107,11 +125,12 @@
   border-radius: 12px;
   font-size: 14px;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input-wrapper input:focus {
   border-color: #a34804;
+  box-shadow: 0 0 0 3px rgba(163, 72, 4, 0.1);
 }
 
 .icon {
@@ -155,11 +174,15 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .submit-btn:hover {
   background: #873a00;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
 }
 
 /* ==========================================
@@ -238,7 +261,7 @@
   }
 
   .brand-subtitle {
-    display: none; /* मोबाईल आडवा (landscape) केल्यास जागा वाचवण्यासाठी सबटायटल लपवले आहे */
+    display: none;
   }
 
   .auth-card {
