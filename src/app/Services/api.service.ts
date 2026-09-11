@@ -30,7 +30,7 @@ export class ApiService {
         'Content-Type': 'application/json'
       })
     };
-     return this.http.post(this.apiUrl+'login/logIn',JSON.stringify(data), httpOptions)
+     return this.http.post(this.apiUrl+'login/login',JSON.stringify(data), httpOptions)
   }
   
 }

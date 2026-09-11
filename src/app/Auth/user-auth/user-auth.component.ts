@@ -24,7 +24,7 @@ export class UserAuthComponent {
  
 
   apires = toSignal(toObservable(this.formData).pipe(switchMap((data:any) =>{if (!data) return of(null);return this.service.senduserinfo(data);})))
-  apireslogin = toSignal(toObservable(this.formData).pipe(switchMap((data:any) =>{if (!data) return of(null);return this.service.senduserinfoLogin(data);})))
+  apireslogin = toSignal(toObservable(this.loginformData).pipe(switchMap((data:any) =>{if (!data) return of(null);return this.service.senduserinfoLogin(data);})))
 
   constructor(){
     this.authform = this.fb.group({
@@ -48,6 +48,11 @@ export class UserAuthComponent {
       const reslogin = this.apireslogin() as any;
       if(reslogin){
         console.log("Login Api Response",reslogin)
+        if(reslogin.flag == "1"){
+          this.route.navigateByUrl('/dashboard')
+        }else{
+          alert("api fail")
+        }
       }else{
         alert("Unauthorized User")
       }
