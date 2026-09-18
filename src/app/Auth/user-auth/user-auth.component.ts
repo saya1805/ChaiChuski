@@ -54,7 +54,7 @@ export class UserAuthComponent {
           alert("api fail")
         }
       }else{
-        alert("Unauthorized User")
+        console.log("Unauthorized User")
       }
     })
   }
