@@ -5,16 +5,17 @@
     <div class="today-badge">Today's Total: <span>₹1,240</span></div>
   </div>
 
-  <div class="main-layout">
+       <div class="main-layout">
     <!-- Left Section: Category Accordions -->
     <div class="categories-section">
       
       <!-- Category 1: Chai & Coffee (Expanded Example) -->
+       @for (fitems of Foptions; track fitems.name){
       <div class="category-card expanded">
         <div class="category-header">
           <div class="cat-title">
-            <span class="cat-icon">☕</span>
-            <span class="cat-name">Chai & Coffee</span>
+            <span class="cat-icon">{{fitems.icon}}</span>
+            <span class="cat-name">{{fitems.name}}</span>
           </div>
           <span class="arrow-icon">▲</span>
         </div>
@@ -53,9 +54,10 @@
           </div>
         </div>
       </div>
+    }
 
       <!-- Category 2: Snacks (Collapsed Example) -->
-      <div class="category-card">
+      <!-- <div class="category-card">
         <div class="category-header">
           <div class="cat-title">
             <span class="cat-icon">🍞</span>
@@ -63,10 +65,10 @@
           </div>
           <span class="arrow-icon">▼</span>
         </div>
-      </div>
+      </div> -->
 
       <!-- Category 3: Cold Drinks (Collapsed Example) -->
-      <div class="category-card">
+      <!-- <div class="category-card">
         <div class="category-header">
           <div class="cat-title">
             <span class="cat-icon">🥤</span>
@@ -74,7 +76,7 @@
           </div>
           <span class="arrow-icon">▼</span>
         </div>
-      </div>
+      </div> -->
 
     </div>
 
