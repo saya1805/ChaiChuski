@@ -5,79 +5,37 @@
     <div class="today-badge">Today's Total: <span>₹1,240</span></div>
   </div>
 
-       <div class="main-layout">
+  <div class="main-layout">
     <!-- Left Section: Category Accordions -->
     <div class="categories-section">
       
-      <!-- Category 1: Chai & Coffee (Expanded Example) -->
-       @for (fitems of Foptions; track fitems.name){
-      <div class="category-card expanded">
-        <div class="category-header">
+      @for (fitems of Menuall(); track fitems.name; let i = $index){
+      <div class="category-card" [class.expanded]="opeentoggleCatg() == i">
+        <div class="category-header" (click)="tooglecategory(i)">
           <div class="cat-title">
-            <span class="cat-icon">{{fitems.icon}}</span>
-            <span class="cat-name">{{fitems.name}}</span>
+            <!-- <span class="cat-icon">{{fitems.icon}}</span> -->
+            <span class="cat-name">{{geticonWithName(fitems.categName)}}{{fitems.categName}}</span>
           </div>
-          <span class="arrow-icon">▲</span>
+          <span class="arrow-icon">{{opeentoggleCatg() == i ? '▲' : '▼'}}</span>
         </div>
 
-        <div class="items-grid">
-          <div class="item-card active">
-            <div class="item-info">
-              <span class="item-name">Cutting Tea</span>
-              <span class="item-price">₹12</span>
+        <!-- Smooth Accordion Wrapper -->
+        <div class="items-grid-wrapper">
+          <div class="items-grid">
+         @for(fmenu of fitems.menuItems;track fmenu.id){
+            <div class="item-card">
+              <div class="item-info">
+                <span class="item-name">{{fmenu.menuName}}</span>
+                <span class="item-price">₹{{fmenu.menuPrice}}</span>
+              </div>
+              <button class="add-btn" type="button">+</button>
             </div>
-            <button class="add-btn" type="button">+</button>
-          </div>
-
-          <div class="item-card">
-            <div class="item-info">
-              <span class="item-name">Ginger Tea</span>
-              <span class="item-price">₹20</span>
-            </div>
-            <button class="add-btn" type="button">+</button>
-          </div>
-
-          <div class="item-card">
-            <div class="item-info">
-              <span class="item-name">Cold Coffee</span>
-              <span class="item-price">₹50</span>
-            </div>
-            <button class="add-btn" type="button">+</button>
-          </div>
-
-          <div class="item -card">
-            <div class="item-info">
-              <span class="item-name">Masala Tea</span>
-              <span class="item-price  ">₹25</span>
-            </div>
-            <button class="add-btn" type="button">+</button>
+          }
           </div>
         </div>
+
       </div>
-    }
-
-      <!-- Category 2: Snacks (Collapsed Example) -->
-      <!-- <div class="category-card">
-        <div class="category-header">
-          <div class="cat-title">
-            <span class="cat-icon">🍞</span>
-            <span class="cat-name">Snacks</span>
-          </div>
-          <span class="arrow-icon">▼</span>
-        </div>
-      </div> -->
-
-      <!-- Category 3: Cold Drinks (Collapsed Example) -->
-      <!-- <div class="category-card">
-        <div class="category-header">
-          <div class="cat-title">
-            <span class="cat-icon">🥤</span>
-            <span class="cat-name">Cold Drinks</span>
-          </div>
-          <span class="arrow-icon">▼</span>
-        </div>
-      </div> -->
-
+      }
     </div>
 
     <!-- Right Section: Live Cart & Multi-Actions -->
@@ -122,14 +80,12 @@
         <span class="amount">₹47</span>
       </div>
 
-      <!-- Action Buttons (Save & Print / Save Only / Print Only) -->
+      <!-- Action Buttons -->
       <div class="cart-actions">
-        <!-- Main Primary Button -->
         <button class="btn btn-save-print" type="button">
           🖨️ Save & Print (₹47)
         </button>
 
-        <!-- Secondary Buttons -->
         <div class="sub-actions">
           <button class="btn btn-save" type="button">
             💾 Save Only

@@ -127,6 +127,16 @@
   transition: all 0.2s ease;
 }
 
+.nav-item.active {
+  background-color: #fef5ea;
+  color: #a75211;
+  font-weight: 600;
+}
+
+.nav-item.active svg {
+  stroke: #a75211;
+}
+
 .nav-item:hover:not(.active) {
   background-color: #f7fafc;
   color: #1a202c;
