@@ -1,25 +1,23 @@
 <div class="counter-container">
   <!-- Top Header Bar -->
   <div class="counter-header">
-    <h2>☕ ChaiKhata Counter</h2>
+    <h2>🫖 ChaiKatta Counter</h2>
     <div class="today-badge">Today's Total: <span>₹1,240</span></div>
   </div>
 
   <div class="main-layout">
-    <!-- Left Section: Category Accordions -->
+
     <div class="categories-section">
       
       @for (fitems of Menuall(); track fitems.name; let i = $index){
       <div class="category-card" [class.expanded]="opeentoggleCatg() == i">
         <div class="category-header" (click)="tooglecategory(i)">
           <div class="cat-title">
-            <!-- <span class="cat-icon">{{fitems.icon}}</span> -->
             <span class="cat-name">{{geticonWithName(fitems.categName)}}{{fitems.categName}}</span>
           </div>
           <span class="arrow-icon">{{opeentoggleCatg() == i ? '▲' : '▼'}}</span>
         </div>
 
-        <!-- Smooth Accordion Wrapper -->
         <div class="items-grid-wrapper">
           <div class="items-grid">
          @for(fmenu of fitems.menuItems;track fmenu.id){
@@ -38,14 +36,12 @@
       }
     </div>
 
-    <!-- Right Section: Live Cart & Multi-Actions -->
     <div class="cart-section">
       <div class="cart-header">
         <h3>🛒 Current Order</h3>
         <button class="clear-btn" type="button">Clear</button>
       </div>
 
-      <!-- Cart Item List -->
       <div class="cart-list">
         <div class="cart-item">
           <div class="cart-details">
@@ -64,7 +60,6 @@
         </div>
       </div>
 
-      <!-- Payment Mode Options -->
       <div class="payment-mode-section">
         <label class="section-label">PAYMENT MODE</label>
         <div class="payment-options">
@@ -74,13 +69,11 @@
         </div>
       </div>
 
-      <!-- Amount Summary -->
       <div class="total-summary">
         <span>Total Amount:</span>
         <span class="amount">₹47</span>
       </div>
 
-      <!-- Action Buttons -->
       <div class="cart-actions">
         <button class="btn btn-save-print" type="button">
           🖨️ Save & Print (₹47)

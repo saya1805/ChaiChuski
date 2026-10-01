@@ -39,14 +39,11 @@ export class DashboardComponent {
     console.log(allowedIcons)
     for (const [key, value] of Object.entries(ChaiKIcon)){
       if(Iname == key){
-        console.log(`मॅच झालं! Key: ${key}, Icon: ${value}`)
-        this.IconValue = value
+        console.log(`Key: ${key}, Icon: ${value}`)
+        this.IconValue = value 
         return value;
       }
     }
-    // if(Iname == ){
-    //   console.log(`मॅच झालं! Key: ${key}, Icon: ${value}`);
-    // }
     return '❓' ;
   }
 
